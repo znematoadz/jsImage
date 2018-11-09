@@ -1,0 +1,116 @@
+:root {
+    --grayScale: 0%;
+    --blur: 0px;
+    --brightness: 100%;
+    --hueRotate: 0deg;
+    --sepia: 0%;
+    --borderColor: #ffc600;
+    --borderSize: 3px;
+    --borderRadius: 0%;
+    --padding: 26px;
+}
+
+
+img {
+    
+    border: var(--borderSize) solid var(--borderColor);
+    filter: blur(var(--blur)) grayscale(var(--grayScale)) hue-rotate(var(--hueRotate)) brightness(var(--brightness)) sepia(var(--sepia));
+    padding: var(--padding);
+    border-radius: var(--borderRadius);
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    
+    
+}
+
+.hl {
+    color: var(--borderColor);
+    margin: auto;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+
+/* below this comment do not effect image adjustments */
+
+
+body {
+    width: 80%;
+    background: #373b3d;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    height: 100vh;  
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  p {
+    font-size: 1rem;
+    flex: 1 1 auto;
+    margin: auto;
+    
+    }
+
+
+
+
+
+.header {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+}
+
+.form {
+    flex: 1 1 auto;
+    margin: auto;
+    text-align: center;
+}
+
+#imageInput {
+    width: 60%;
+}
+
+.imageContainer {
+    flex: 1 1 auto;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    flex: 1 1 auto;
+    margin: auto;
+}
+
+  .controls {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+    .input {
+        flex: 4 1 auto;
+        padding: .1em;
+        box-shadow: 0px 0px 1px rgba(151, 149, 149, 0.616);
+        background-color: rgba(141, 145, 141, 0.473)
+    }
+
+  #borderColor {
+      
+      height: 2em;
+      width: 6em;
+      margin: auto 0 auto 0;
+
+  }
+
+  
+
+ 
