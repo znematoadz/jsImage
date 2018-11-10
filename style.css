@@ -8,6 +8,7 @@
     --borderSize: 3px;
     --borderRadius: 0%;
     --padding: 26px;
+    --imageSize: 500px;
 }
 
 
@@ -17,6 +18,7 @@ img {
     filter: blur(var(--blur)) grayscale(var(--grayScale)) hue-rotate(var(--hueRotate)) brightness(var(--brightness)) sepia(var(--sepia));
     padding: var(--padding);
     border-radius: var(--borderRadius);
+    width: var(--imageSize);
     margin: auto;
     max-width: 100%;
     height: auto;
@@ -41,10 +43,7 @@ body {
     font-family: 'helvetica neue', sans-serif;
     font-weight: 100;
     font-size: 30px;
-    height: 100vh;  
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+    height: auto;
     margin: auto;
   }
 
@@ -59,10 +58,12 @@ body {
 
 
 .header {
-    flex: 1 1 auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
     display: flex;
     flex-flow: row wrap;
-    
+    width: 100%;
+    height: auto;
     
 }
 
@@ -84,15 +85,20 @@ body {
 }
 
 .imageContainer {
-    flex: 1 1 auto;
-    margin: auto;
     
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
 }
 
 .container {
-    flex: 1 1 auto;
+    
     margin: auto;
     text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
 }
 
   .controls {
