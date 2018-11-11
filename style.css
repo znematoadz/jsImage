@@ -8,7 +8,11 @@
     --borderSize: 3px;
     --borderRadius: 0%;
     --padding: 26px;
-    
+    --offsetX: 0px;
+    --offsetY: 0px;
+    --blurRadius: 0px;
+    --spreadRadius: 0px;
+    --shadowColor: #000000;
 }
 
 
@@ -18,10 +22,11 @@ img {
     filter: blur(var(--blur)) grayscale(var(--grayScale)) hue-rotate(var(--hueRotate)) brightness(var(--brightness)) sepia(var(--sepia)) !important;
     padding: var(--padding) !important;
     border-radius: var(--borderRadius) !important;
-    
+    box-shadow: var(--offsetX) var(--offsetY) var(--blurRadius) var(--spreadRadius) var(--shadowColor);
     
     
 }
+
 
 .fa-github {
     color: var(--borderColor);
