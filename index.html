@@ -2,84 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>jsImage</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
-  
-  <div class="header">
-  <h1 class='hl'>jsImage | <a href="https://github.com/znematoadz/jsImage"><i class="fab fa-github    "></i></a></h1>
-  
-
-  <div class="form">
-    <input id="imageInput" placeholder="add image url...">
-    <button type="button" onclick="inputImage()">Submit</button>
-  </div>
-</div>
-
-<div class="container">
-  <div class="controls">
-    <div class="input">
-      <label for="brightness">Brightness:</label>
-        <input id="brightness" type="range" name="brightness" min="0" max="500" value="100" data-sizing="%">
-        <p class="value" >100%</p>
-    </div> 
-    <div class="input">
-      <label for="hueRotate">Hue-Rotate:</label>
-      <input id="hueRotate" type="range" name="hueRotate" min="0" max="360" value="0" data-sizing="deg">
-      <p class="value">0deg</p>
-    </div>
-    <div class="input">
-      <label for="grayScale">GrayScale:</label>
-      <input id="grayScale" type="range" name="grayScale" min="0" max="100" value="0" data-sizing="%">
-      <p class="value">0%</p>
-    </div>
-    <div class="input">
-      <label for="sepia">Sepia:</label>
-      <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%">
-      <p class="value">0%</p>
-    </div>
-    <div class="input">
-      <label for="blur">Blur:</label>
-      <input id="blur" type="range" name="blur" min="0" max="10" value="0" data-sizing="px">
-      <p class="value">0px</p>
+<body id="body" class="bg-light">
+  <div class="container ">
+  <div class="header container text-center mt-2 mb-3">
+    <div class="row mb-3">
+      <h1 class='hl col'>jsImage </h1>
+      <a class="m-auto col" href="https://github.com/znematoadz/jsImage"><i class="fab fa-github    "></i></a>
+      <button id="toggle" class="btn btn-dark m-auto col" type="button" onclick="toggleMode()">Change Background Color</button>
     </div>
     
-    <div class="input">
-      <label for="borderSize">Border Size:</label>
-      <input id="borderSize" type="range" name="borderSize" min="0" max="25" value="3" data-sizing="px">
-      <p class="value">3px</p>
-    </div>
-    <div class="input">
-      <label for="borderRadius">Border-Radius:</label>
-      <input id="borderRadius" type="range" name="borderRadius" min="0" max="100" value="0" data-sizing="%">
-      <p class="value">0%</p>
-    </div>
-    <div class="input">
-      <label for="padding">Padding:</label>
-      <input id="padding" type="range" name="padding" min="0" max="30" value="26" data-sizing="px">
-      <p class="value">26px</p>
-    </div>
-    <div class="input">
-      <label for="imageSize">Image Size:</label>
-      <input id="imageSize" type="range" name="imageSize" min="30" max="700" value="500" data-sizing="px">
-      <p class="value">500px</p>
-    </div>
-    <div class="input">  
-      <label for="borderColor">Border Color:</label>
-      <input id="borderColor" type="color" name="borderColor" value="#ffc600">
-      
-    </div>  
+  
+  <div class="form col-12 col-lg-6 mt-2 input-group m-auto">
+    <input class="form-control" id="imageInput" placeholder="add image url...">
+    <button class="input-group-append btn btn-dark" type="button" onclick="inputImage()">Submit</button>
   </div>
 </div>
 
-<div class="imageContainer">
-  <img id="mainImg"   src="https://images.unsplash.com/photo-1540153448870-af780343526e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=156b02ddcd899f8e70270bf6c4f57932&auto=format&fit=crop&w=700&q=80">
-</div>
-  
 
+
+<div class="container-fluid imageContainer w-75 m-auto">
+    <img id="mainImg"  class="w-100 m-auto" src="https://images.unsplash.com/photo-1540153448870-af780343526e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=156b02ddcd899f8e70270bf6c4f57932&auto=format&fit=crop&w=700&q=80">
+  </div>
+
+
+
+<div class="container-fluid col mt-3 mb-5 ">
+  <div class="d-flex controls row justify-content-between">
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+      <div class="row input-group m-auto">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="brightness">Brightness:</label>
+          </div>
+            <input id="brightness" class="custom-range form-control pl-2 bg-light" type="range" name="brightness" min="0" max="500" value="100" data-sizing="%">
+          
+            <div class="input-group-append value input-group-text">
+              100%
+            </div>
+      </div>
+    </div> 
+    
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+            <div class="input-group-prepend">         
+              <label class="input-group-text" for="hueRotate">Hue-Rotate:</label>
+            </div>
+      
+            <input id="hueRotate" class="custom-range form-control pl-2 bg-light " type="range" name="hueRotate" min="0" max="360" value="0" data-sizing="deg">
+      
+            <div class="input-group-append value input-group-text">
+                0deg
+              </div>
+      </div>
+    </div>
+    
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="grayScale">GrayScale:</label>
+            </div>
+      
+            <input id="grayScale" class="custom-range form-control pl-2 bg-light" type="range" name="grayScale" min="0" max="100" value="0" data-sizing="%">
+      
+            <div class="input-group-append value input-group-text">
+                0%
+              </div>
+      </div>
+    </div>
+    
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+            <div class="input-group-prepend">        
+              <label class="input-group-text" for="sepia">Sepia:</label>
+             </div> 
+      
+             <input id="sepia" class="custom-range form-control pl-2 bg-light" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%">
+      
+             <div class="input-group-append value input-group-text">
+                0%
+              </div>
+      </div>
+    </div>
+
+
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="blur">Blur:</label>
+            </div>
+              
+            <input id="blur" class="custom-range form-control pl-2 bg-light" type="range" name="blur" min="0" max="10" value="0" data-sizing="px">
+      
+            <div class="input-group-append value input-group-text">
+              0px
+            </div>
+      </div>
+    </div>
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto ">
+        <div class="row input-group m-auto">
+          
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="borderSize">Border Size:</label>
+          </div>
+      
+          <input id="borderSize" class="custom-range form-control pl-2 bg-light" type="range" name="borderSize" min="0" max="25" value="3" data-sizing="px">
+            
+          <div class="input-group-append value input-group-text">
+              3px
+          </div>
+      </div>
+    </div>
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="borderRadius">Border-Radius:</label>
+            </div>
+              <input id="borderRadius" class="custom-range form-control pl-2 bg-light" type="range" name="borderRadius" min="0" max="100" value="0" data-sizing="%">
+            <div class="input-group-append value input-group-text">
+              0%
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="input col-12 col-md-6 col-lg-4 m-auto">
+        <div class="row input-group m-auto">
+          
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="padding">Padding:</label>
+          </div>
+            
+          <input id="padding" class="custom-range form-control pl-2 bg-light" type="range" name="padding" min="0" max="30" value="26" data-sizing="px">
+          
+          <div class="input-group-append value input-group-text">
+              26px
+          </div>
+            
+      </div>
+    </div>
+    
+    
+
+
+    <div class="input col m-auto">  
+        <div class="row input-group m-auto">
+      <label class="input-group-text" for="borderColor">Border Color:</label>
+      <input class="form-control" id="borderColor" type="color" name="borderColor" value="#ffc600">
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+  
+</div>
  
   
 

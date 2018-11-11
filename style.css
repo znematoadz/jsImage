@@ -4,38 +4,39 @@
     --brightness: 100%;
     --hueRotate: 0deg;
     --sepia: 0%;
-    --borderColor: #ffc600;
+    --borderColor: #ffc600 ;
     --borderSize: 3px;
     --borderRadius: 0%;
     --padding: 26px;
-    --imageSize: 500px;
+    
 }
 
 
 img {
     
-    border: var(--borderSize) solid var(--borderColor);
-    filter: blur(var(--blur)) grayscale(var(--grayScale)) hue-rotate(var(--hueRotate)) brightness(var(--brightness)) sepia(var(--sepia));
-    padding: var(--padding);
-    border-radius: var(--borderRadius);
-    width: var(--imageSize);
-    margin: auto;
-    max-width: 100%;
-    height: auto;
+    border: var(--borderSize) solid var(--borderColor) !important;
+    filter: blur(var(--blur)) grayscale(var(--grayScale)) hue-rotate(var(--hueRotate)) brightness(var(--brightness)) sepia(var(--sepia)) !important;
+    padding: var(--padding) !important;
+    border-radius: var(--borderRadius) !important;
+    
     
     
 }
 
 .fa-github {
     color: var(--borderColor);
+    font-size: 2em;
 }
 
+.hl {
+    color: var(--borderColor) !important;
+}
 
 
 
 /* below this comment do not effect image adjustments */
 
-
+/*
 body {
     width: 80%;
     background: #373b3d;
@@ -98,7 +99,7 @@ body {
     text-align: center;
     width: 100%;
     height: auto;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
   .controls {
@@ -138,7 +139,7 @@ body {
       margin: auto;
   }
 
-  
+  */
   
 
  
